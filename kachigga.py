@@ -1,5 +1,6 @@
 import os
-import pyfiglet
+from pyfiglet import figlet_format
+from termcolor import colored
 
 def greet():
     os.system("Hello there, $USER")
@@ -12,14 +13,11 @@ def acceptInput(input):
 
 
 def main():
-    fig = pyfiglet.Figlet(font='slant')
-    introtext = fig.renderText("1!")
-    othertext = fig.renderText("2!")
-    text3 = fig.renderText("3")
-    print(introtext)
-    print("\n\n")
-    print(othertext)
-    print("\n\n")
+    text1 = colored(figlet_format("1"), color="blue")
+    text2 = colored(figlet_format("2"), color="green")
+    text3 = colored(figlet_format("3"), color="yellow")
+    print(text1)
+    print(text2)
     print(text3)
 
 main()
