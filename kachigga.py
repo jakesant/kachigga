@@ -12,11 +12,18 @@ def acceptInput(input):
 
 
 def main():
-    fig = Figlet(font='slant')
-    introtext = fig.renderText("Hello there user!")
+    fig = pyfiglet.Figlet(font='slant')
+    introtext = fig.renderText("1!")
+    othertext = fig.renderText("2!")
+    text3 = fig.renderText("3")
     print(introtext)
+    print("\n\n")
+    print(othertext)
+    print("\n\n")
+    print(text3)
 
-print("~~~Enter a command~~~")
-usr_input = input()
-acceptInput(usr_input)
+main()
+#print("~~~Enter a command~~~")
+#usr_input = input()
+#acceptInput(usr_input)
 
