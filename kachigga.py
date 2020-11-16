@@ -13,23 +13,24 @@ class Prompt(Cmd):
         else:
             name = args
         print("Hello there ", args)
+    
+    def do_cd(self,input):
+        os.chdir(input)
 
+    def do_dir(self, input):
+        print(os.listdir())
     def do_ls(self, input):
         print(os.listdir())
 
     def do_exit(self, input):
         return True
 
+    def do_cwd(self, input):
+        print("CWD: ", os.getcwd())
+
 
 def greet():
     os.system("Hello there, $USER")
-
-def acceptInput(input):
-    if(input == "Hello"):
-        greet()
-    if(input == "Kachigga"):
-        print("Kachigga!")
-
 
 def load():
     text1 = colored(figlet_format("Welcome"), color="blue")
