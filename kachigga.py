@@ -1,6 +1,25 @@
+#!/usr/bin/env python
+
 import os
 from pyfiglet import figlet_format
+from cmd import Cmd
 from termcolor import colored
+import colorama
+
+class Prompt(Cmd):
+    def do_aw(self, args):
+        if(len(args)) == 0:
+            name = "xi wiehed"
+        else:
+            name = args
+        print("Hello there ", args)
+
+    def do_ls(self, input):
+        print(os.listdir())
+
+    def do_exit(self, input):
+        return True
+
 
 def greet():
     os.system("Hello there, $USER")
@@ -12,15 +31,21 @@ def acceptInput(input):
         print("Kachigga!")
 
 
-def main():
-    text1 = colored(figlet_format("1"), color="blue")
-    text2 = colored(figlet_format("2"), color="green")
-    text3 = colored(figlet_format("3"), color="yellow")
+def load():
+    text1 = colored(figlet_format("Welcome"), color="blue")
+    text2 = colored(figlet_format("To"), color="green")
+    text3 = colored(figlet_format("Kachigga"), color="yellow")
     print(text1)
     print(text2)
     print(text3)
 
-main()
+if __name__ == '__main__':
+    colorama.init()
+    load()
+    prompt = Prompt()
+    prompt.prompt = 'kachIgga>> '
+    prompt.cmdloop("Starting prompt...")
+
 #print("~~~Enter a command~~~")
 #usr_input = input()
 #acceptInput(usr_input)
