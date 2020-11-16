@@ -25,6 +25,12 @@ class Prompt(Cmd):
     def do_cwd(self, input):
         print("CWD: ", os.getcwd())
 
+    def do_echo(self, input):
+        if(input is None):
+            print("\n")
+        else:
+            print(input)
+
 def load():
     text1 = colored(figlet_format("Welcome"), color="blue")
     text2 = colored(figlet_format("To"), color="green")
