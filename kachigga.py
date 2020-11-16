@@ -5,16 +5,13 @@ from pyfiglet import figlet_format
 from cmd import Cmd
 from termcolor import colored
 import colorama
+import getpass
 
 class Prompt(Cmd):
-    def do_aw(self, args):
-        if(len(args)) == 0:
-            name = "xi wiehed"
-        else:
-            name = args
-        print("Hello there ", args)
+    def do_aw(self, input):
+        print("Hello there,", getpass.getuser()) #Prints current user's name
     
-    def do_cd(self,input):
+    def do_cd(self, input):
         os.chdir(input)
 
     def do_dir(self, input):
@@ -27,10 +24,6 @@ class Prompt(Cmd):
 
     def do_cwd(self, input):
         print("CWD: ", os.getcwd())
-
-
-def greet():
-    os.system("Hello there, $USER")
 
 def load():
     text1 = colored(figlet_format("Welcome"), color="blue")
