@@ -6,6 +6,7 @@ from cmd import Cmd
 from termcolor import colored
 import colorama
 import getpass
+import scrabble
 
 class Prompt(Cmd):
     def do_aw(self, input):
@@ -30,6 +31,16 @@ class Prompt(Cmd):
             print("\n")
         else:
             print(input)
+
+    def do_nicetext(self, input):
+        args = input.split(" ")
+        if(args[1] == '--colour'):
+            print(colored(figlet_format(args[0]), color=args[2]))
+        else:
+            print(colored(figlet_format(input)))
+
+    def do_scrabble(self, input):
+        scrabble.calculate_points(input)
 
 def load():
     text1 = colored(figlet_format("Welcome"), color="blue")
