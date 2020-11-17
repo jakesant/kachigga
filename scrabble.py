@@ -30,6 +30,7 @@ def calculate_points(word):
     }
 
     for letter in word:
+        letter = letter.lower() #Makes letter lowercase so that I don't have to rewrite a dictionary for capital letters
         wordpoints += points.get(letter)
 
     print(word, " is worth ", wordpoints ," points")
