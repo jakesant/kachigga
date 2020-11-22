@@ -31,6 +31,12 @@ class Prompt(Cmd):
             print("\n")
         else:
             print(input)
+        
+    def do_hex(self, input):
+        if(hex(int(input)) is not None):
+            print(input, " in hex is ", hex(int(input)))
+        else:
+            print("Cannot calculate hex for ", input)
 
     def do_nicetext(self, input):
         args = input.split(" ")
