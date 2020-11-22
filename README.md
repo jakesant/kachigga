@@ -9,11 +9,16 @@ to learn about how shell processes function and expand my knowledge of Python al
 
 ## Commands
 
-    $aw         Greets user with the name of the user account
-    $echo       Outputs the arguments string
-    $cwd        Returns current working directory
-    $ls/dir     Return current files and folders in current working directory
-    $cd         Changes current working directory
-    $nicetext   Uses pyfiglet to return ASCII art version of arguments string
-    $scrabble   Gives the amount of points the arguments string is worth in Scrabble
-    $exit       Exits Kachigga
+    $ aw         Greets user with the name of the user account
+    $ echo       Outputs the arguments string
+    $ cwd        Returns current working directory
+    $ ls/dir     Return current files and folders in current working directory
+    $ cd         Changes current working directory
+    $ nicetext   Uses pyfiglet to return ASCII art version of arguments string
+    $ scrabble   Gives the amount of points the arguments string is worth in Scrabble
+    $ hex        Gives hex value of number argument
+    $ bin        Gives binary value of number argument
+    $ d6         Throws a D6 die and gives a number
+    $ d12        Throws a D12 die and gives a number
+    $ d20        Throws a D20 die and gives a number
+    $ exit       Exits Kachigga
