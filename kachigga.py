@@ -38,6 +38,12 @@ class Prompt(Cmd):
         else:
             print("Cannot calculate hex for ", input)
 
+    def do_bin(self, input):
+        if(bin(int(input)) is not None):
+                print(input, "in binary is ", bin(int(input)))
+        else:
+            print("Cannot convert ", input, " to binary")
+
     def do_nicetext(self, input):
         args = input.split(" ")
         if(args[1] == '--colour'):
