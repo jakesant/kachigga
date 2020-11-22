@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import random
 from pyfiglet import figlet_format
 from cmd import Cmd
 from termcolor import colored
@@ -53,6 +54,18 @@ class Prompt(Cmd):
 
     def do_scrabble(self, input):
         scrabble.calculate_points(input)
+    
+    def do_d6(self, input):
+        roll = random.randint(1, 6)
+        print("You rolled a ", roll)
+
+    def do_d12(self, input):
+        roll = random.randint(1, 12)
+        print("You rolled a ", roll)
+
+    def do_d20(self, input):
+        roll = random.randint(1, 20)
+        print("You rolled a ", roll)        
 
 def load():
     text1 = colored(figlet_format("Welcome"), color="blue")
