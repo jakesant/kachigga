@@ -8,6 +8,7 @@ from termcolor import colored
 import colorama
 import getpass
 import scrabble
+from datetime import datetime
 
 class Prompt(Cmd):
     def do_aw(self, input):
@@ -22,6 +23,7 @@ class Prompt(Cmd):
         print(os.listdir())
 
     def do_exit(self, input):
+        print("Goodbye")
         return True
 
     def do_cwd(self, input):
@@ -65,7 +67,18 @@ class Prompt(Cmd):
 
     def do_d20(self, input):
         roll = random.randint(1, 20)
-        print("You rolled a ", roll)        
+        print("You rolled a ", roll)
+
+    def do_time(self, input):
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time)
+
+    def do_date(self, input):
+        now = datetime.now()
+        current_date = now.strftime("%d-%m-%Y")
+        print("Current Date =", current_date)
+
 
 def load():
     text1 = colored(figlet_format("Welcome"), color="blue")
