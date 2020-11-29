@@ -85,6 +85,9 @@ class Prompt(Cmd):
         current_date = now.strftime("%d-%m-%Y")
         print("Current Date =", current_date)
 
+    def do_ping(self, input):
+        os.system('ping -n 4 {}'.format(input))
+
 
 def load():
     text1 = colored(figlet_format("Welcome"), color="blue")
