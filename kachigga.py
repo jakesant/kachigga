@@ -47,6 +47,12 @@ class Prompt(Cmd):
         else:
             print("Cannot convert ", input, " to binary")
 
+    def do_oct(self, input):
+        if(oct(int(input)) is not None):
+            print(input, "in octal is ", oct(int(input)))
+        else:
+            print("Cannot calculate octal value for ", input)
+
     def do_nicetext(self, input):
         args = input.split(" ")
         if(args[1] == '--colour'):
