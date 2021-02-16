@@ -95,6 +95,9 @@ class Prompt(Cmd):
         input = input.replace("I","1")
         print(input)
 
+    def default(self, input):
+        print("Unknown command")
+
 def load():
     text1 = colored(figlet_format("Welcome"), color="blue")
     text2 = colored(figlet_format("To"), color="green")
