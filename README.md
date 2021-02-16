@@ -21,4 +21,6 @@ to learn about how shell processes function and expand my knowledge of Python al
     $ d6         Throws a D6 die and gives a number
     $ d12        Throws a D12 die and gives a number
     $ d20        Throws a D20 die and gives a number
+    $ ping       Ping
+    $ taboo      Converts text to that in the format of Denzel Curry's album TABOO
     $ exit       Exits Kachigga
