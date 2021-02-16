@@ -88,6 +88,12 @@ class Prompt(Cmd):
     def do_ping(self, input):
         os.system('ping -n 4 {}'.format(input))
 
+    def do_taboo(self, input):
+        input = input.upper()
+        input = input.replace("S","Z")
+        input = input.replace("B","13")
+        input = input.replace("I","1")
+        print(input)
 
 def load():
     text1 = colored(figlet_format("Welcome"), color="blue")
