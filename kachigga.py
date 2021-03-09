@@ -9,6 +9,7 @@ import colorama
 import getpass
 import scrabble
 from datetime import datetime
+from convert_file import con_file
 
 class Prompt(Cmd):
     def do_aw(self, input):
@@ -94,6 +95,9 @@ class Prompt(Cmd):
         input = input.replace("B","13")
         input = input.replace("I","1")
         print(input)
+
+    def do_convert(self, input):
+        con_file(input)
 
     def default(self, input):
         print("Unknown command")
