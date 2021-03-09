@@ -97,7 +97,7 @@ class Prompt(Cmd):
         print(input)
 
     def do_convert(self, input):
-        con_file(input)
+        con_file(input, output_path = os.getcwd())
 
     def default(self, input):
         print("Unknown command")
